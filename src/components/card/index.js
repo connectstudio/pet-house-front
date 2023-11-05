@@ -3,8 +3,21 @@ import styles from "./styles";
 import { View, Text, TouchableHighlight } from "react-native";
 import darkenColor from "../../utils/darkenColor";
 
-export default function Card({ icon, bgColor, title, description, children }) {
+export default function Card({
+  icon,
+  bgColor,
+  title,
+  description,
+  children,
+  onPress,
+}) {
   const [isPressed, setIsPressed] = React.useState(false);
+  const handlePress = () => {
+    setIsPressed(!isPressed);
+    if (onPress) {
+      onPress();
+    }
+  };
 
   return (
     <TouchableHighlight
@@ -14,7 +27,7 @@ export default function Card({ icon, bgColor, title, description, children }) {
           backgroundColor: isPressed ? darkenColor(bgColor, 0.5) : bgColor,
         },
       ]}
-      onPress={() => setIsPressed(!isPressed)}
+      onPress={handlePress}
       underlayColor={bgColor}
     >
       <View>
