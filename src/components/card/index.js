@@ -3,7 +3,7 @@ import styles from "./styles";
 import { View, Text, TouchableHighlight } from "react-native";
 import darkenColor from "../../utils/darkenColor";
 
-export default function Card({ icon, bgColor, title, description }) {
+export default function Card({ icon, bgColor, title, description, children }) {
   const [isPressed, setIsPressed] = React.useState(false);
 
   return (
@@ -29,6 +29,7 @@ export default function Card({ icon, bgColor, title, description }) {
             <Text style={styles.textDescription}>{description}</Text>
           </View>
         )}
+        {children}
       </View>
     </TouchableHighlight>
   );

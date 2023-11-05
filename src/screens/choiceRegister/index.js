@@ -6,7 +6,7 @@ import Card from "../../components/card";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function choiceRegister() {
+export default function ChoiceRegister() {
   return (
     <SafeAreaView>
       <View style={styles.cardsView}>
