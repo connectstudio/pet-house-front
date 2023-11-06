@@ -5,9 +5,7 @@ import { SafeAreaView } from "react-native";
 export default function Splashscreen() {
   return (
     <SafeAreaView>
-      <View>
-        <Text>Hello world!</Text>
-      </View>
+
     </SafeAreaView>
   );
 }

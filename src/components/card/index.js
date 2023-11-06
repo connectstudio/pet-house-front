@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles";
 import { View, Text, TouchableHighlight } from "react-native";
 import darkenColor from "../../utils/darkenColor";
@@ -11,7 +11,8 @@ export default function Card({
   children,
   onPress,
 }) {
-  const [isPressed, setIsPressed] = React.useState(false);
+  const [isPressed, setIsPressed] = useState(false);
+
   const handlePress = () => {
     setIsPressed(!isPressed);
     if (onPress) {

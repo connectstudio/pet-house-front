@@ -1,5 +1,7 @@
-import {registerRootComponent} from 'expo';
+import React from "react";
+import MainRoutes from "./src/routes/MainRoutes";
 
-import App from './src/index';
+export default function App() {
+  return <MainRoutes/>;
+};
 
-registerRootComponent(App);
